@@ -1,0 +1,88 @@
+﻿<Window x:Class="demobtl.nguoidung"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:demobtl"
+        mc:Ignorable="d"
+        Title="Book" Height="737" Width="1033"
+         Loaded="Window_Loaded">
+    <Grid>
+        <Border BorderThickness="1" HorizontalAlignment="Left" Height="454" Margin="28,79,0,0" VerticalAlignment="Top" Width="388" Background="#FFA7D8C3" BorderBrush="{DynamicResource {x:Static SystemColors.MenuTextBrushKey}}" Grid.IsSharedSizeScope="True"/>
+        <Label Content="Quản lý người dùng" HorizontalAlignment="Left" Height="49" Margin="141,20,0,0" VerticalAlignment="Top" Width="236" FontStyle="Italic" FontWeight="Bold" FontSize="22"/>
+        <TextBox x:Name="timkiem" HorizontalAlignment="Left" Height="37" Margin="582,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="357" FontSize="18" ScrollViewer.CanContentScroll="True"/>
+        <Label Content="Email" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="94" FontSize="18" Margin="42,170,0,0" RenderTransformOrigin="0.495,0.543"/>
+        <Label Content="Phone" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="94" FontSize="18" Margin="42,226,0,0"/>
+        <TextBox x:Name="ten" HorizontalAlignment="Left" Height="39" Margin="142,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="243" FontFamily="Arial Unicode MS">
+            <TextBox.CaretBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.CaretBrush>
+        </TextBox>
+        <TextBox x:Name="email" HorizontalAlignment="Left" Height="39" Margin="142,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="243" FontFamily="Arial Unicode MS"/>
+        <TextBox x:Name="phone" HorizontalAlignment="Left" Height="39" Margin="142,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="243" FontFamily="Arial Unicode MS"/>
+        <Button x:Name="thêm" Content="Thêm" HorizontalAlignment="Left" Height="38" Margin="36,571,0,0" VerticalAlignment="Top" Width="101" FontSize="16" Background="#FF2BB54C" Click="thêm_Click"/>
+        <Button x:Name="capnhat" Content="Cập nhật" HorizontalAlignment="Left" Height="39" Margin="186,652,0,0" VerticalAlignment="Top" Width="101" FontSize="16" Background="#FFDE642A" Click="capnhat_Click"/>
+        <Button x:Name="sua" Content="Sửa" HorizontalAlignment="Left" Height="39" Margin="186,570,0,0" VerticalAlignment="Top" Width="100" FontSize="16" Background="#FF58B9A5" Click="sua_Click"/>
+        <Button x:Name="xoa" Content="Xóa" HorizontalAlignment="Left" Height="39" Margin="36,652,0,0" VerticalAlignment="Top" Width="100" FontSize="16" RenderTransformOrigin="0.625,-0.396" Background="#FF2F7FA9" Click="xoa_Click"/>
+        <DataGrid x:Name="danhsach" HorizontalAlignment="Left" Height="597" Margin="471,81,0,0" VerticalAlignment="Top" Width="527" d:ItemsSource="{d:SampleData ItemCount=5}" Background="#FFA7D8C3" SelectionChanged="danhsach_SelectionChanged"/>
+        <Button x:Name="quayve" Content="" HorizontalAlignment="Left" Height="45" Margin="386,646,0,0" VerticalAlignment="Top" Width="52" BorderBrush="White" Click="quayve_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="https://www.tranlegroup.com/Uploads/Image/Trinh/4-nguyen-tac-thiet-ke-web-mobile-3.jpg"/>
+            </Button.Background>
+        </Button>
+        <Label Content="ID Name" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="94" FontSize="18" Margin="42,413,0,0" RenderTransformOrigin="0.495,0.543"/>
+        <Label Content="ID Login" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="94" FontSize="18" Margin="42,454,0,0" RenderTransformOrigin="0.495,0.543"/>
+        <TextBox x:Name="id_user" HorizontalAlignment="Left" Height="39" Margin="142,410,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="243">
+            <TextBox.CaretBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.CaretBrush>
+        </TextBox>
+        <TextBox x:Name="id_lg" HorizontalAlignment="Left" Height="38" Margin="142,454,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="243">
+            <TextBox.CaretBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.CaretBrush>
+        </TextBox>
+        <Button Content="" HorizontalAlignment="Left" Height="37" Margin="944,25,0,0" VerticalAlignment="Top" Width="41" BorderBrush="White" RenderTransformOrigin="0.11,0.555" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="https://i.pinimg.com/564x/e9/a2/be/e9a2be0b196f703509b3bbb9b17ef602.jpg"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Name" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="94" FontSize="18" Margin="42,108,0,0" RenderTransformOrigin="0.495,0.543"/>
+        <Label Content="UserName" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="94" FontSize="18" Margin="42,288,0,0" RenderTransformOrigin="0.495,0.543"/>
+        <Label Content="Password" HorizontalAlignment="Left" Height="36" VerticalAlignment="Center" Width="94" FontSize="18" Margin="42,0,0,0" RenderTransformOrigin="0.495,0.543"/>
+        <TextBox x:Name="username" HorizontalAlignment="Left" Height="39" Margin="141,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" FontFamily="Arial Unicode MS">
+            <TextBox.CaretBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.CaretBrush>
+        </TextBox>
+        <TextBox x:Name="password" HorizontalAlignment="Left" Height="39" Margin="141,343,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" FontFamily="Arial Unicode MS">
+            <TextBox.CaretBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.CaretBrush>
+        </TextBox>
+        <Button x:Name="home1" Content="" HorizontalAlignment="Left" Height="50" Margin="36,16,0,0" VerticalAlignment="Top" Width="54" FontFamily="Tempus Sans ITC" FontSize="16" Click="Button_Click_1">
+            <Button.Background>
+                <ImageBrush ImageSource="https://i.pinimg.com/564x/43/0d/4b/430d4bbd67dbca08087043609231b6d1.jpg"/>
+            </Button.Background>
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+        </Button>
+
+    </Grid>
+</Window>

@@ -1,0 +1,54 @@
+﻿<Window x:Class="demobtl.Form_Search"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:demobtl"
+        mc:Ignorable="d"
+        Title="Form_Search" Height="450" Width="800" WindowStartupLocation="CenterScreen" Loaded="Form_Search_Loaded">
+    <Grid>
+        <Label Content="Từ khóa:" HorizontalAlignment="Left" Height="27" Margin="10,58,0,0" VerticalAlignment="Top" Width="58"/>
+        <Label Content="Tác giả:" HorizontalAlignment="Left" Height="27" Margin="17,100,0,0" VerticalAlignment="Top" Width="51"/>
+        <Label Content="Thể loại:" HorizontalAlignment="Left" Height="27" Margin="577,69,0,0" VerticalAlignment="Top" Width="54"/>
+        <TextBox x:Name="KeyWord_title" HorizontalAlignment="Left" Height="27" Margin="78,58,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354"/>
+        <TextBox x:Name="KeyWord_author" HorizontalAlignment="Left" Height="27" Margin="78,100,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" />
+        <TextBox x:Name="KeyWord_category" HorizontalAlignment="Left" Height="24" Margin="636,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" />
+        <Button x:Name="bt_Search" Content="Tìm kiếm" HorizontalAlignment="Left" Height="30" Margin="328,142,0,0" VerticalAlignment="Top" Width="104" Click="Button_Search" BorderBrush="#FFFFFBFB" Background="#FFD8E4E8"/>
+        <ListBox x:Name="Data_Search" HorizontalAlignment="Left" Height="247" Margin="10,177,0,0" VerticalAlignment="Top" Width="583" d:ItemsSource="{d:SampleData ItemCount=0}"  FontFamily="Times New Roman" BorderBrush="#FFECECEC" FontSize="14" SelectionChanged="Data_Search_SelectionChanged" Foreground="Black" Background="#FFD8E4E8"/>
+        <ListBox x:Name="List_category" HorizontalAlignment="Left" Height="282" Margin="612,142,0,0" VerticalAlignment="Top" Width="178" d:ItemsSource="{d:SampleData ItemCount=0}"  FontFamily="Segoe UI Symbol" BorderBrush="#FF5D8EBB" Background="#FFD8E4E8" FontSize="14"/>
+        <Button x:Name="bt_showAll" Content="Xem tất cả" HorizontalAlignment="Left" Height="30" Margin="10,142,0,0" VerticalAlignment="Top" Width="153" Click="Button_ShowAll" BorderBrush="White" Background="#FFD8E4E8"/>
+        <TextBox x:Name="tb_cref" HorizontalAlignment="Left" Height="2" Margin="614,80,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="3" RenderTransformOrigin="0.5,0.5" Background="Transparent" BorderBrush="#00ABADB3" Foreground="#00000000" SelectionBrush="#000078D7">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Label Content="Danh sách các thể loại:" HorizontalAlignment="Left" Height="30" Margin="636,105,0,0" VerticalAlignment="Top" Width="136"/>
+        <Label Content="(Nhập tên thể loại)" HorizontalAlignment="Left" Height="30" Margin="565,86,0,0" VerticalAlignment="Top" Width="136" FontSize="8"/>
+        <Button x:Name="home1" Content="" HorizontalAlignment="Left" Height="50" Margin="10,0,0,0" VerticalAlignment="Top" Width="54" FontFamily="Tempus Sans ITC" FontSize="16" Click="Button_Click_1">
+            <Button.Background>
+                <ImageBrush ImageSource="https://i.pinimg.com/564x/43/0d/4b/430d4bbd67dbca08087043609231b6d1.jpg"/>
+            </Button.Background>
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+        </Button>
+        <Button x:Name="taikhoan" Content="" HorizontalAlignment="Left" Height="28" Margin="686,10,0,0" VerticalAlignment="Top" Width="35" Click="Button_Click_3" BorderBrush="White">
+            <Button.Background>
+                <ImageBrush ImageSource="https://cdn.onlinewebfonts.com/svg/img_243887.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="" HorizontalAlignment="Left" Height="32" Margin="110,6,0,0" VerticalAlignment="Top" Width="26">
+            <Label.Background>
+                <ImageBrush ImageSource="https://i.pinimg.com/564x/26/74/b6/2674b6e19c35834b1135e8e8c3fec5e8.jpg"/>
+            </Label.Background>
+        </Label>
+        <Button x:Name="tl" Content="Thể loại" HorizontalAlignment="Left" Height="28" Margin="136,10,0,0" VerticalAlignment="Top" Width="56" BorderBrush="#FFF7F7F7" Background="White" Click="tl_Click"/>
+        <Button x:Name="dangxuat" Content="Đăng xuất" HorizontalAlignment="Left" Height="28" Margin="726,10,0,0" VerticalAlignment="Top" Width="64" Background="White" BorderBrush="#FFFFFDFD" FontWeight="Bold" Click="dangxuat_Click" Foreground="#FF2052CC"/>
+
+    </Grid>
+</Window>
